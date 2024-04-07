@@ -251,7 +251,7 @@ export const detailsProduct = (productId) => async (dispatch) => {
   dispatch({ type: PRODUCT_DETAILS_REQUEST, payload: productId });
 
   try {
-    const { data } = await axios.get(`/api/products/${productId}`);
+    const { data } = await axios.get(backend_url + `/api/products/${productId}`);
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({

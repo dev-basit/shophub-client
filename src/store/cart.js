@@ -1,4 +1,5 @@
 import Axios from "axios";
+const backendUrl = process.env.REACT_APP_BASE_URL;
 
 const CART_ADD_ITEM = "CART_ADD_ITEM";
 const CART_REMOVE_ITEM = "CART_REMOVE_ITEM";
@@ -45,7 +46,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
 // Action  Creators
 export const addToCart = (productId, qty) => async (dispatch, getState) => {
   try {
-    const { data } = await Axios.get(`/api/products/${productId}`);
+    const { data } = await Axios.get(backendUrl + `/api/products/${productId}`);
 
     dispatch({
       type: CART_ADD_ITEM,
