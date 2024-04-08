@@ -22,6 +22,7 @@ import UserEditScreen from "./screens/user/UserEditScreen";
 import SellerScreen from "./screens/user/SellerScreen";
 import SearchScreen from "./screens/SearchScreen";
 import MapScreen from "./screens/MapScreen";
+import DashboardScreen from "./screens/DashboardScreen";
 
 import PrivateRoute from "./components/routes/PrivateRoute";
 import AdminRoute from "./components/routes/AdminRoute";
@@ -150,6 +151,7 @@ function App() {
           <AdminRoute path="/order-list" component={OrderListScreen} exact></AdminRoute>
           <AdminRoute path="/userlist" component={UserListScreen}></AdminRoute>
           <AdminRoute path="/user/edit/:id" component={UserEditScreen}></AdminRoute>
+          <AdminRoute path="/dashboard" component={DashboardScreen}></AdminRoute>
 
           <SellerRoute path="/product-list/seller" component={ProductListScreen}></SellerRoute>
           <SellerRoute path="/orderlist/seller" component={OrderListScreen}></SellerRoute>
